@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0c0c0c;
+    --color:#E61D2B;
+}
+
+/* CARD BIGGER SIZE */
+.card{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+/* EXPAND MORE AREA */
+.card:hover{
+    width: 850px;
+    height: 550px;
+    transition-delay: 0.5s;
+}
+
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .card .circle {
+  background: url("https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/MSNBC/Components/Photo/_new/090121-Coca-Cola-vmed-11a.jpg") no-repeat center/contain;
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+} */
+
+/* 🔥 GLOW LIGHT EFFECT ADDED */
+.card .circle::before{
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 2px;
+    right: 2px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: #191919;
+    border: 10px solid var(--color);
+    transition: transform 0.75s, background 1s;
+    filter: drop-shadow(0 0 25px var(--color)) brightness(1.2);
+}
+
+/* BIGGER + BRIGHTER ON HOVER */
+.card:hover .circle::before{
+    transition-delay: 0.5s;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background: var(--color);
+    filter: drop-shadow(0 0 50px var(--color)) brightness(1.8);
+}
+
+/* LOGO BIGGER */
+.card .circle .logo{
+    position: relative;
+    width: 200px;
+    transition: 0.8s;
+    transition-delay: 0.8s;
+}
+
+.card:hover .circle .logo{
+    transform: scale(0);
+    transition-delay: 0s;
+}
+
+/* PRODUCT BIGGER */
+.card .product{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0) rotate(315deg);
+    height: 420px;
+    transition: 0.5s ease-in-out;
+    filter: drop-shadow(0 0 25px #fff);
+}
+
+/* 🔥 EXTRA LIGHT EFFECT ON HOVER */
+.card:hover .product{
+    transition-delay: 0.75s;
+    top: 30%;
+    left: 75%;
+    height: 600px;
+    transform: translate(-50%,-50%) scale(1) rotate(15deg);
+    filter: drop-shadow(0 0 60px #fff);
+}
+
+/* CONTENT AREA BADA */
+.card .content{
+    position: absolute;
+    width: 55%;
+    left: 20%;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.card:hover .content{
+    opacity: 1;
+    visibility: visible;
+    left: 30px;
+    transition-delay: 0.75s;
+}
+
+.card .content h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    line-height: 1em;
+}
+
+.card .content p{
+    color: #fff;
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+.card .content a{
+    position: relative;
+    color: #151515;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+/* .card .circle {
+  background: url("img/circle-logo.png") no-repeat center/contain;
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);} */
+/* } */
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111;
+} */
+
+/* #new{
+     display: flex;
+    justify-content: center; */
+    /* align-items: center; */
+/* }
+.icons{
+    display: flex;
+    justify-content: center; */
+    /* gap: 40px; /   icons ke beech distance */
+    /* position: absolute; */
+    /* margin-top: 0px; */
+/* } */
+/* 
+.icons a{
+    width: 70px;
+    height: 70px;
+    background: #222;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.icons a:hover{
+    background: var(--color);
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px var(--color);
+} */

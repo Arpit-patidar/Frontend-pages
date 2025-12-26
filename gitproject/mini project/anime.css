@@ -1,0 +1,207 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    position:relative;
+    color:white;
+}
+
+/* BACKGROUND */
+.bg-slide{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    filter:brightness(0.6);
+    z-index:-1;
+    transition:1s;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    font-size:28px;
+}
+
+.auth-btn{
+    padding:8px 15px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+.hidden{display:none;}
+
+/* MAIN */
+main{
+    text-align:center;
+}
+
+.title{
+    margin-bottom:20px;
+}
+
+/* CARD SECTION */
+.con{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    padding:30px;
+    backdrop-filter: blur(12px);
+    background:rgba(255,255,255,0.1);
+    border-radius:25px;
+    margin:0 auto;
+    width:fit-content;
+}
+
+.card{
+    perspective:1000px;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+@keyframes float{
+    from{transform:translateY(0)}
+    to{transform:translateY(-12px)}
+}
+
+.card img{
+    width:220px;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+    filter:grayscale(100%);
+    transition:0.6s;
+    -webkit-box-reflect: below 8px linear-gradient(transparent,rgba(0,0,0,0.3));
+}
+
+.card:hover img{
+    transform:scale(1.15) rotateY(15deg);
+    filter:grayscale(0%);
+}
+
+/* AUTH MODAL */
+.auth-modal{
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(8px);
+}
+
+.auth-box{
+    background:rgba(255,255,255,0.15);
+    padding:25px;
+    border-radius:20px;
+    width:320px;
+}
+
+.close-btn{
+    float:right;
+    cursor:pointer;
+}
+
+.tabs{
+    display:flex;
+    justify-content:space-around;
+    margin-bottom:15px;
+}
+
+.tabs button{
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+    opacity:0.6;
+}
+
+.tabs .active{
+    opacity:1;
+    border-bottom:2px solid white;
+}
+
+.form{
+    display:none;
+    flex-direction:column;
+    gap:10px;
+}
+
+.form.active{display:flex;}
+
+.form input, .form button{
+    padding:10px;
+    border:none;
+    border-radius:8px;
+}
+h1,h2{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjGlDlLHtIvdgR3F_qTwvteUqYinLKR86WDg&s");
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 100px;
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+}
+
+/* BACKGROUND ANIMATION */
+.bg-slide {
+    background: url('img.jpg');
+    background-size: cover;
+    /* animation-name: animate; */
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+
+
+    /* position: absolute; */
+    /* margin: ; */
+
+.cards-section{
+    display:none;
+}
+.cards-section.active{
+    display:flex;
+}
+.card {
+    animation: scroll 6s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-600%);
+        
+        
+    }
+}

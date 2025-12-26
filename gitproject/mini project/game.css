@@ -1,0 +1,47 @@
+body{
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial;
+}
+
+.game-container{
+    text-align: center;
+}
+
+canvas{
+    background-color: #222;
+    border: 2px solid #444;
+}
+
+.info{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#gameOver{
+    margin-top: 20px;
+    font-size: 22px;
+    color: red;
+}
+
+.hidden{
+    display: none;
+}
+
+button{
+    padding: 6px 12px;
+    margin-left: 10px;
+    background: green;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background: darkgreen;
+}

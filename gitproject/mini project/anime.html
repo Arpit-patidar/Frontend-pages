@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Frontend Website</title>
+<link rel="stylesheet" href="anime.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="bg-slide"></div>
+
+<!-- HEADER -->
+<header class="header">
+  <h2 class="logo">MY ANIMES </h2>
+  <div class="user-area">
+    <span id="username"></span>
+    <button id="openAuth" class="auth-btn">Login</button>
+    <button id="logoutBtn" class="auth-btn hidden">Logout</button>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+  <h1 class="title">ANIME GALLARY</h1>
+
+  <div class="con">
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFRFf5WEYOu5E3TlFgsndk3i3GMurN3SKT8A&s">
+    </div>
+    <div class="card">
+        <img src="https://wallpapers-clan.com/wp-content/uploads/2024/05/demon-slayer-zenitsu-thunder-strike-desktop-wallpaper-cover.jpg">
+    </div>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirEYDk6FieuJX5hrwad9loA5oNxKjDsyRjQ&s">
+    </div>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJBDdm1FzCG3WP67QijAB2caZQUinfd3UNg&s">
+    </div>
+    <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLVx9eJXxonBUtjtI0B4CuTYl7v7OoxdWA0w&s" alt=""></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA0RBkPd4iMdYm89mA1Sp8hZkqAEulAWL26g&s" alt=""></div>
+ 
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt1H7O9RhJdfHXORUseMYKAll-wcBc4MglVw&s" alt=""></div>
+
+</div>
+</main>
+
+<div class="cards-section con">
+    <!-- cards here -->
+</div>
+
+<!-- AUTH MODAL -->
+<div class="auth-modal" id="authModal">
+  <div class="auth-box">
+    <span class="close-btn" id="closeAuth">&times;</span>
+
+    <div class="tabs">
+      <button id="loginTab" class="active">Login</button>
+      <button id="registerTab">Register</button>
+    </div>
+
+    <form id="loginForm" class="form active">
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button type="submit">Login</button>
+    </form>
+
+    <form id="registerForm" class="form">
+      <input type="text" id="regName" placeholder="Username">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="password" id="regPassword" placeholder="Password">
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
+
+<script src="anime.js"></script>
+</body>
+</html>

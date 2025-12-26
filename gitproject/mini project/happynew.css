@@ -1,0 +1,142 @@
+body,
+html {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.507); 
+    touch-action: none;
+    
+}
+
+svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("https://png.pngtree.com/background/20250102/original/pngtree-dancing-stars-happy-new-year-holiday-background-with-painting-fireworks-picture-image_13431623.jpg"); */
+    
+    background: black; 
+    cursor: pointer;
+}
+
+
+.dragon-stretched {
+    filter: drop-shadow(0 0 8px #0ac3db) drop-shadow(0 0 16px #00ffff);
+    opacity: 1;
+}
+
+.dragon-collapsed {
+    filter: drop-shadow(0 0 8px #ff00ff) drop-shadow(0 0 16px #ff00ff);
+    opacity: 1;
+}
+
+.dragon-head {
+    filter: drop-shadow(0 0 10px #ffff00) drop-shadow(0 0 20px #ffff00);
+    opacity: 1;
+}
+
+.dragon-fins {
+    filter: drop-shadow(0 0 8px #00ff00) drop-shadow(0 0 16px #00ff00);
+    opacity: 1;
+}
+
+
+use {
+    opacity: 1;
+    fill: #ffffff;
+}
+.dragon-stretched {
+    animation: glowShift 4s infinite linear;
+}
+
+@keyframes glowShift {
+    0% {
+        filter: drop-shadow(0 0 12px #ff0000)
+                drop-shadow(0 0 25px #ff6600)
+                drop-shadow(0 0 40px #ff3300);
+    }
+    25% {
+        filter: drop-shadow(0 0 12px #00ffea)
+                drop-shadow(0 0 25px #00ffcc)
+                drop-shadow(0 0 40px #00ffe6);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px #ff00d9)
+                drop-shadow(0 0 25px #ff00ff)
+                drop-shadow(0 0 40px #cc00ff);
+    }
+    75% {
+        filter: drop-shadow(0 0 12px #08ff00)
+                drop-shadow(0 0 25px #38ff00)
+                drop-shadow(0 0 40px #65ff00);
+    }
+    100% {
+        filter: drop-shadow(0 0 12px #ff0000)
+                drop-shadow(0 0 25px #ff6600)
+                drop-shadow(0 0 40px #ff3300);
+    }
+}
+.dragon-fins {
+    animation: glowShift 4s infinite linear;
+}
+
+@keyframes glowShift {
+    0% {
+        filter: drop-shadow(0 0 12px #5fd410)
+                drop-shadow(0 0 25px #0e9725)
+                drop-shadow(0 0 40px #afcc09);
+    }
+    25% {
+        filter: drop-shadow(0 0 12px #00ffea)
+                drop-shadow(0 0 25px #00ffcc)
+                drop-shadow(0 0 40px #7cd605);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px #eb4e06)
+                drop-shadow(0 0 25px #ff00ff)
+                drop-shadow(0 0 40px #cc00ff);
+    }
+    75% {
+        filter: drop-shadow(0 0 12px #00ffdd)
+                drop-shadow(0 0 25px #38ff00)
+                drop-shadow(0 0 40px #65ff00);
+    }
+    100% {
+        filter: drop-shadow(0 0 12px #56e404)
+                drop-shadow(0 0 25px #132fce)
+                drop-shadow(0 0 40px #ff3300);
+    }
+}
+.dragon-head {
+    animation: glowShift 4s infinite linear;
+}
+
+@keyframes glowShift {
+    0% {
+        filter: drop-shadow(0 0 12px #ff0000)
+                drop-shadow(0 0 25px #ff6600)
+                drop-shadow(0 0 40px #ff3300);
+    }
+    25% {
+        filter: drop-shadow(0 0 12px #00ffea)
+                drop-shadow(0 0 25px #f17704)
+                drop-shadow(0 0 40px #00ffe6);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px #ff00d9)
+                drop-shadow(0 0 25px #08b6eb)
+                drop-shadow(0 0 40px #cc00ff);
+    }
+    75% {
+        filter: drop-shadow(0 0 12px #08ff00)
+                drop-shadow(0 0 25px #0787dd)
+                drop-shadow(0 0 40px #65ff00);
+    }
+    100% {
+        filter: drop-shadow(0 0 12px #ff0000)
+                drop-shadow(0 0 25px #ff6600)
+                drop-shadow(0 0 40px #ff3300);
+    }
+}

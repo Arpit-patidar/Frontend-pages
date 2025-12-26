@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    background: #111;
+}
+
+.icons{
+    display: flex;
+    gap: 40px;    /* icons ke beech distance */
+}
+
+.icons a{
+    width: 70px;
+    height: 70px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.icons a:hover{
+    background: var(--color);
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px var(--color);
+}
