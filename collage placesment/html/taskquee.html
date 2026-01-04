@@ -1,0 +1,107 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="count">00:00:00</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <script>
+        // console.log("hello");
+        // Promise.resolve().then(()=>{
+        //     console.log("promise");
+        //     set
+        // })
+        // setTimeout(()=>{
+        //     console.log("settime out");
+        
+        // },2000)
+        // console.log("byee");
+        
+// let a = 10
+//         let x = setInterval(()=>{
+//             // console.log("hello pratik");
+//             // console.log("hello pratik");
+//             console.log(--a);
+            
+//         },1000)
+//         setTimeout(()=>{
+//             clearInterval(x)
+//         },20000)
+
+        let start = document.getElementById("start")
+        let count = document.getElementById("count")
+        let stop = document.getElementById("stop")
+let b= 0 ;
+let x;
+start.addEventListener("click",()=>{
+   x= setInterval(()=>{
+count.innerText=b++
+    console.log(b);
+    },1000)
+     
+})
+;
+ stop.addEventListener("click",()=>{
+   clearInterval(x)
+})
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+<body>
+
+    <h1 id="count">00:00:00</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        let start = document.getElementById("start");
+        let stop = document.getElementById("stop");
+        let count = document.getElementById("count");
+
+        let sec = 0, min = 0, hr = 0;
+        let interval = null;
+
+        function updateTime() {
+            sec++;
+
+            if (sec === 60) {
+                sec = 0;
+                min++;
+            }
+            if (min === 60) {
+                min = 0;
+                hr++;
+            }
+
+            count.innerText =
+                String(hr).padStart(2, "0") + ":" +
+                String(min).padStart(2, "0") + ":" +
+                String(sec).padStart(2, "0");
+        }
+
+        start.addEventListener("click", () => {
+            if (interval === null) {
+                interval = setInterval(updateTime, 0);
+            }
+        });
+
+        stop.addEventListener("click", () => {
+            clearInterval(interval);
+            interval = null;
+        });
+    </script>
+
+</body>
+</html>

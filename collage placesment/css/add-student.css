@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: system-ui, Arial, sans-serif;
+}
+
+/* BODY */
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#e9fdf7;              /* ❌ red remove */
+    overflow-x:hidden;          /* scroll allow */
+}
+
+/* HEADER */
+#header{
+    height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    background:rgba(15,40,50,0.75);
+    backdrop-filter:blur(14px);
+    z-index:10;
+}
+
+#logo{
+    color:#66ffee;
+    cursor:pointer;
+}
+
+/* SEARCH */
+.search-box{
+    display:flex;
+    gap:6px;
+}
+
+.search-box input{
+    height:38px;
+    width:260px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.2);
+    padding:0 15px;
+    background:#122932;
+    color:white;
+}
+
+.search-box button{
+    height:38px;
+    width:42px;
+    border-radius:50%;
+    border:none;
+    background:#1de9b6;
+    cursor:pointer;
+}
+
+/* NAV */
+#navlink{
+    display:flex;
+    gap:14px;
+}
+
+#navlink a{
+    padding:10px 18px;
+    border-radius:20px;
+    color:#66ffee;
+    text-decoration:none;
+    background:rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+#navlink a:hover{
+    background:rgba(102,255,238,0.25);
+    box-shadow:0 0 12px rgba(102,255,238,0.6);
+}
+
+/* FORM */
+form{
+    width:720px;
+    margin:50px auto;
+    padding:35px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(16px);
+    border-radius:22px;
+    text-align:center;
+    z-index:10;
+    position:relative;
+}
+
+form h2{
+    color:#66ffee;
+    margin-bottom:20px;
+}
+
+/* INPUTS */
+input, select{
+    width:300px;
+    height:44px;
+    margin:10px;
+    padding:0 16px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.25);
+    background:#132d36;
+    color:white;
+}
+
+input:focus, select:focus{
+    border-color:#1de9b6;
+    box-shadow:0 0 0 3px rgba(29,233,182,0.25);
+}
+
+/* BUTTON */
+button[type="submit"]{
+    width:220px;
+    height:46px;
+    margin-top:25px;
+    border-radius:30px;
+    border:none;
+    background:linear-gradient(135deg,#1de9b6,#66ffee);
+    font-weight:700;
+    cursor:pointer;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colleges</title>
+
+<link rel="stylesheet" href="../css/header.css">
+
+<style>
+/* ===== Background ===== */
+body{
+    background: linear-gradient(120deg,#141e30,#243b55);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* ===== Header ===== */
+#header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+}
+
+#header h1{
+    color: #00ff9c;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+#header input[type="search"]{
+    height: 40px;
+    width: 25%;
+    border-radius: 25px;
+    border: none;
+    padding: 0 15px;
+    outline: none;
+    background: rgba(0,255,200,0.3);
+    transition: all 0.3s ease;
+}
+
+#header input[type="search"]:hover{
+    background: rgba(0,255,200,0.6);
+    box-shadow: 0 0 12px aqua;
+}
+
+#header input[type="search"]:focus{
+    background: #ffffff;
+    box-shadow: 0 0 15px lime;
+    transform: scale(1.05);
+}
+
+#navlink{
+    height: 80px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navlink a{
+    padding: 10px 18px;
+    font-size: 18px;
+    color: #00ff9c;
+    background: rgba(0,255,255,0.25);
+    border-radius: 30px;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#navlink a:hover{
+    background: aqua;
+    color: black;
+    box-shadow: 0 0 12px aqua;
+    transform: translateY(-3px);
+}
+
+/* ===== College Container ===== */
+#college-container{
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* ===== College Card ===== */
+.college-card{
+    height: 260px;
+    width: 280px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+/* ===== Inner Box ===== */
+.card-box{
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgba(0,255,255,0.4);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+/* Text */
+.card-box h2{
+    color: aqua;
+    margin-bottom: 10px;
+}
+.card-box p{
+    opacity: 0.85;
+}
+
+/* Container hover → all blur */
+/* #college-container:hover .college-card{
+    filter: blur(4px);
+    opacity: 0.4;
+    transform: scale(0.95);
+} */
+
+/* Hovered card */
+#college-container .college-card:hover{
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1.12);
+    background: linear-gradient(135deg,#00f260,#0575e6);
+    box-shadow:
+        0 0 20px rgba(0,255,255,0.7),
+        0 25px 50px rgba(0,0,0,0.6);
+    z-index: 10;
+}
+
+/* Hover effect on box */
+#college-container .college-card:hover .card-box{
+    border-color: #ffffff;
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,0.6),
+        0 0 15px rgba(255,255,255,0.6);
+}
+
+/* Text glow */
+#college-container .college-card:hover h2,
+#college-container .college-card:hover p{
+    color: white;
+    text-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+
+</style>
+</head>
+
+<body>
+
+<header id="header">
+    <h1 id="logo">Placement Tracker</h1>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search student, company, job role">
+        <button id="searchBtn">🔍</button>
+        <button id="micBtn">🎤</button>
+    </div>
+
+    <nav id="navlink">
+        <a href="index.html">Home</a>
+        <a href="student.html">Students</a>
+        <a href="college.html">Colleges</a>
+        <a href="companies.html">Companies</a>
+        <a href="job-role.html">Job Roles</a>
+    </nav>
+</header>
+
+
+<section id="college-container">
+    <!-- Cards will be rendered by JS -->
+</section>
+
+<script src="../js/Api.js"></script>
+<script src="../js/college.js">
+</script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script> -->
+<!-- THREE JS -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="../js/three.js"></script>
+<script src="../js/search.js"></script>
+
+</body>
+</html>

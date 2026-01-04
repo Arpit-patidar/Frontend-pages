@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Tracker</title>
+
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+
+<header id="header">
+    <h1 id="logo">Placement Tracker</h1>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search student, company, job role">
+        <button id="searchBtn">🔍</button>
+        <button id="micBtn">🎤</button>
+    </div>
+
+    <nav id="navlink">
+        <a href="index.html">Home</a>
+        <a href="student.html">Students</a>
+        <a href="college.html">Colleges</a>
+        <a href="companies.html">Companies</a>
+        <a href="job-role.html">Job Roles</a>
+    </nav>
+</header>
+
+
+<main id="second">
+    <div class="card" id="student"></div>
+    <div class="card" id="colleges"></div>
+    <div class="card" id="companies"></div>
+    <div class="card" id="jobrole"></div>
+</main>
+
+<footer id="footer">
+    © Placement Tracker
+</footer>
+
+<script src="../js/Api.js"></script>
+<script src="../js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="../js/three.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/student.js"></script>
+</body>
+</html>

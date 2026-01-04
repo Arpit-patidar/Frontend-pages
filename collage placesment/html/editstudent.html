@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/add-student.css">
+</head>
+<body>
+
+<h2>Edit Student</h2>
+
+<form id="studentForm">
+
+    <input type="text" id="studentname" placeholder="Student Name" required>
+
+    <select id="studentGender" required>
+        <option value="">Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <input type="date" id="dob" required>
+
+    <input type="text" id="profileimg" placeholder="Profile Image URL">
+
+    <input type="text" id="college" placeholder="College ID">
+    <input type="text" id="department" placeholder="Department">
+    <input type="text" id="degree" placeholder="Degree">
+    <input type="number" id="graduation" placeholder="Graduation Year">
+    <input type="number" step="0.1" id="cgpa" placeholder="CGPA">
+    <input type="number" id="backlogs" placeholder="Backlogs">
+
+    <input type="text" id="programming" placeholder="Programming skills">
+    <input type="text" id="database" placeholder="Database skills">
+    <input type="text" id="tool" placeholder="Tools">
+
+    <select id="placementstudent">
+        <option value="Placed">Placed</option>
+        <option value="Not Placed">Not Placed</option>
+    </select>
+
+    <button type="submit">Update Student</button>
+
+</form>
+
+<!-- <script src="editstudent.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="../js/three-water-bg.js"></script>
+
+<!-- FORM JS -->
+ <script src="../js/editstudent.js"></script>
+
+<script src="../js/Api.js"></script>
+<script src="../js/student.js"></script>
+>
+</html>

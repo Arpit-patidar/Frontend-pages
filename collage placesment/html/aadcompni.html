@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Company</title>
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/add-student.css">
+</head>
+
+<body>
+
+<header id="header">
+    <h1 id="logo">Placement Tracker</h1>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search student, company, job role">
+        <button id="searchBtn">🔍</button>
+        <button id="micBtn">🎤</button>
+    </div>
+
+    <nav id="navlink">
+        <a href="index.html">Home</a>
+        <a href="student.html">Students</a>
+        <a href="college.html">Colleges</a>
+        <a href="companies.html">Companies</a>
+        <a href="job-role.html">Job Roles</a>
+    </nav>
+</header>
+
+<form id="companyForm">
+    <h2>Add Company</h2>
+
+    <input id="companyname" placeholder="Company Name" required>
+    <input id="companytype" placeholder="Company Type">
+    <input id="location" placeholder="Location">
+    <input id="website" placeholder="Website">
+    <input id="companylogo" placeholder="Logo URL">
+
+    <input id="jobrole" placeholder="Job Role">
+    <input id="package" placeholder="Package">
+    <input id="eligibilitycgpa" placeholder="Eligibility CGPA">
+    <input id="branches" placeholder="Branches (CS,IT)">
+    <input id="bond" placeholder="Bond">
+
+    <select id="companystatus">
+        <option value="active">Active</option>
+        <option value="closed">Closed</option>
+    </select>
+
+    <button type="submit">Add Company</button>
+</form>
+
+<script src="../js/addCompanies.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="../js/three.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

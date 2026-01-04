@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Roles</title>
+
+    <link rel="stylesheet" href="../css/header.css">
+
+    <style>
+        #jobrole-container{
+            width: 100%;
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .jobrole-card{
+            height: 220px;
+            width: 260px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: 0.4s;
+        }
+
+        .jobrole-card:hover{
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0,255,255,0.4);
+        }
+
+        button{
+            height: 45px;
+            width: 220px;
+            margin: 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            border: 2px solid aqua;
+            background: transparent;
+            color: aqua;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: aqua;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+<header id="header">
+    <h1 id="logo">Placement Tracker</h1>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search student, company, job role">
+        <button id="searchBtn">🔍</button>
+        <button id="micBtn">🎤</button>
+    </div>
+
+    <nav id="navlink">
+        <a href="index.html">Home</a>
+        <a href="student.html">Students</a>
+        <a href="college.html">Colleges</a>
+        <a href="companies.html">Companies</a>
+        <a href="job-role.html">Job Roles</a>
+    </nav>
+</header>
+
+
+
+
+<section id="jobrole-container"></section>
+
+<script src="../js/Api.js"></script>
+<script src="../js/jobrole.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="../js/three.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

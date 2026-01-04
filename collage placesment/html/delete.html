@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="${ele.personal_info.profile_image}">
+    let displaystudent =async(students)=>{
+studcontainer.innerHTML = students.map((ele)=>`
+<div id="student-card">
+
+<img src="${ele.personal_info?.profile_image || 'https://via.placeholder.com/120'}" alt="Profile">
+<h4>Name:${ele.personal_info?.full_name}</h4>
+<h4>studentI:${ele.student_id}</h4>
+<h5>Placemant status:${ele.placement_status}</h5>
+<button class="add-btn" data-id="${ele.student_id}">Add</button>
+            <button class="delete-btn" data-id="${ele.student_id}">Delete</button>
+
+
+</div>
+
+`).join("")
+
+}
+
+
+
+
+
+
+
+
+
+let displaystudent = async (students) => {
+    studcontainer.innerHTML = students.map((ele) => `
+        <div class="student-card">
+            <img src="${ele.personal_info.profile_image || 'https://www.turtlewings.co.in/cdn/shop/files/Zenitsu_Agatsuma_Demon_Slayer_01_A0726-25_2-copyPortrait-01.jpg?crop=center&height=800&v=1760519481&width=800'}" alt="Profile">
+            <h4>Name: ${ele.personal_info.full_name || 'Arpit Patidar'}</h4>
+            <h4>StudentID: ${ele.student_id}</h4>
+            <h5>Placement status: ${ele.placement_status}||Not-place</h5>
+            <div class="card-buttons">
+                <button class="add-btn" data-id="${ele.student_id}">Add</button>
+                <button class="delete-btn" data-id="${ele.student_id}">Delete</button>
+            </div>
+        </div>
+    `).join("");
+}
+</body>
+</html>
